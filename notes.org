@@ -1,0 +1,10 @@
+* DONE Day01
+Simple reduction operation.
+I need to figure out ponylang:
+- [X] Input/Output
+Output is simple enough ~env.out.print~.
+Input is complicated. Why is it? What does /Stdin represented as an actor/ mean?
+- [X] Iteration
+for loops are simple enough
+
+~a.pop() + a.pop() + a.pop()~ on an array of strings [1, 2, 3, 4, 5] will not give me 543 but 3 4 5. ~+~ is a method and hence arguments are executed first. So the final ~a.pop~ is executed first. So I have to be careful when chaining expressions.
