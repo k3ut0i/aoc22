@@ -1,0 +1,2 @@
+* Advent of Code 2022
+Learning [[https://ponylang.org/][pony]] language.
