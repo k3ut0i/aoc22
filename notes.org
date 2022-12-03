@@ -17,3 +17,7 @@ for loops are simple enough
 - partial methods
 ** Logic
 Mostly trivial hand coding.
+
+* DONE Day03
+HashMaps : ~update~, ~upsert~. Used an anonymous function in upsert.
+
