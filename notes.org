@@ -21,3 +21,6 @@ Mostly trivial hand coding.
 * DONE Day03
 HashMaps : ~update~, ~upsert~. Used an anonymous function in upsert.
 
+* TODO Day04
+- tuples
+Nothing innovative.
