@@ -1,0 +1,3 @@
+* Pharo Implementation.
+I tried to do something in pharo for a while. This seems like a good point to start. I can compare/contrast two different object-oriented languages.
+

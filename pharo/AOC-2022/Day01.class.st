@@ -10,13 +10,13 @@ Class {
 { #category : #running }
 Day01 >> runWithInput: f [
 
-	| fs ss |
+	| fs ss totalCalories sortedCalories |
 	fs := (File named: f) openForRead.
 	ss := Character lf split: fs upToEnd asString.
 	fs close.
-	^ (([ :s | s isEmpty ] split: ss) collect: [ :a1 | 
-		   | x |
-		   x := 0.
-		   a1 do: [ :e | x := x + e asNumber ].
-		   x ]) max
+	totalCalories := ([ :s | s isEmpty ] split: ss) collect: [ 
+		:a1 | (a1 collect: [  :ae | ae asNumber ]) sumNumbers  
+		].
+	sortedCalories := totalCalories sorted: [ :a :b | a >= b ].
+	^ {totalCalories max . (sortedCalories at: 1) + (sortedCalories at: 2) + (sortedCalories at: 3)}
 ]

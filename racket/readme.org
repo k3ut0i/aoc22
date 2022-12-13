@@ -1,0 +1,2 @@
+* Racket Implementation
+While *racket* is similar to scheme, there are a lot of different ways to do things. Idiomatic racket looks different from _r5rs scheme_. I hope to become familiar working with racket through this exercise.
