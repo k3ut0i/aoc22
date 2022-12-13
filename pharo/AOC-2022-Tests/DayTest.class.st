@@ -8,7 +8,7 @@ Class {
 		'testAns',
 		'mainAns'
 	],
-	#category : #'AOC-2022'
+	#category : #'AOC-2022-Tests'
 }
 
 { #category : #'instance creation' }
@@ -70,6 +70,11 @@ DayTest >> testDay01 [
 { #category : #tests }
 DayTest >> testDay02 [
 	(self day: 2 mainAns: #(12586 13193) testAns: #(15 12)) testRun: Day02 new.
+]
+
+{ #category : #tests }
+DayTest >> testDay03 [
+	(self day: 3 mainAns: #(7674 2805) testAns: #(157 70)) testRun: Day03 new.
 ]
 
 { #category : #setting }

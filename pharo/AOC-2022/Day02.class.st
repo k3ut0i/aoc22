@@ -22,7 +22,7 @@ Day02 >> inputData: lines [
 
 { #category : #running }
 Day02 >> runWithInput: f [
-	self inputData: (self class readLinesFromFile: f).
+	self inputData: (Utils readLinesFromFile: f).
 	^ { self scoreOnFirstTry. self scoreOnSecondTry }.
 	
 ]

@@ -9,16 +9,6 @@ Class {
 	#category : #'AOC-2022'
 }
 
-{ #category : #utilities }
-DayAbstract class >> readLinesFromFile: f [
-
-	| fs lines |
-	fs := (File named: f) openForRead.
-	lines := Character lf split: fs upToEnd asString trim.
-	fs close.
-	^ lines.
-]
-
 { #category : #running }
 DayAbstract >> runWithInput: inputFile [
 	^ 'unimplemented function runWithInput.'

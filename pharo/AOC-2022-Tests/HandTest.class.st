@@ -1,7 +1,7 @@
 Class {
 	#name : #HandTest,
 	#superclass : #TestCase,
-	#category : #'AOC-2022'
+	#category : #'AOC-2022-Tests'
 }
 
 { #category : #tests }
