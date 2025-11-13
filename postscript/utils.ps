@@ -1,0 +1,79 @@
+/argordefault % <argumentno> <default>
+{ 2 dict begin
+  /default exch def
+  /argno exch def
+  userdict (ARGUMENTS) known
+  {
+      userdict (ARGUMENTS) get length
+      argno 1 add
+      ge {%if
+          userdict (ARGUMENTS) get argno get
+      } {%else
+          default
+      } ifelse
+  }{ %else
+      default
+  } ifelse
+  end
+} bind def
+
+/spliton % <array> <element> spliton <array-of-arrays>
+{ 2 dict begin
+  /delim exch def
+  /arr exch def
+  mark % array to hold arrays
+  mark % start of first subarray
+  0 1 arr length 1 sub
+  {
+      arr exch get dup delim eq { pop ] [ } if
+  } for
+]] % create last array and the array-of-arrays
+end
+} bind def
+
+/reduce % <array> <proc> reduce <any>
+{ 2 dict begin
+  /proc exch def
+  mark exch aload pop
+  {
+      exch dup mark eq { pop exit } { proc } ifelse
+  } loop
+  end
+} bind def
+
+
+/readlines %<filehandle> readlines <array-of-lines>
+{ 1 dict begin
+  /inpfh exch def
+  /tmpstr 1000 string def
+  [
+      {
+          inpfh tmpstr readline
+          not { exit } if
+          dup length string copy
+      } loop
+  ]
+  end
+} bind def
+
+/filter %<array> <proc> filter <subarray>
+{2 dict begin
+ /proc exch def
+ /arr exch def
+ [
+     arr {
+          dup proc not { pop } if
+     } forall
+ ]
+ end
+} bind def
+
+/map %<array> <proc> map <array>
+{ 2 dict begin
+  /proc exch def
+  /arr exch def
+  [
+      arr { proc } forall
+  ]
+  end
+} bind def

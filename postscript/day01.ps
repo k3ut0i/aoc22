@@ -1,0 +1,16 @@
+(./utils.ps) run
+0 (./input/day01test) argordefault (r) file
+/inpfile exch def
+/mslen 80 def
+mslen string
+/tmpstr exch def
+/arr inpfile readlines def
+inpfile closefile
+
+/elems arr { dup () eq {/empty} {cvi} ifelse }  map def
+elems pstack /empty spliton
+{
+    dup length 0 gt { { add } reduce } { pop } ifelse
+} forall
+pstack
+quit
